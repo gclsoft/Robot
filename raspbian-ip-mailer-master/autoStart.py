@@ -26,13 +26,13 @@ Icon=%s/goagent-logo.png
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=IP Send
+Name=IPSend
 Comment=IP send Launcher
 ''' % (dirname , scriptname , dirname)
     #sometimes maybe  /etc/xdg/autostart , ~/.kde/Autostart/ , ~/.config/openbox/autostart
     for dirname in map(os.path.expanduser, ['~/.config/autostart']):
         if os.path.isdir(dirname):
-            filename = os.path.join(dirname, 'goagent-gtk.desktop')
+            filename = os.path.join(dirname, 'IPSend.desktop')
             with open(filename, 'w') as fp:
                 fp.write(DESKTOP_FILE)
            # os.chmod(filename, 0755)
